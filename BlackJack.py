@@ -7,7 +7,7 @@ values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8,
 
 playing = True
 
-#CARD CLASS
+#THIS IS THR CARD CLASS
 class Card:
     
     def __init__(self, suit, rank):
@@ -46,7 +46,7 @@ class Hand:
     def __init__(self):
         self.cards = []  # start with an empty list as we did in the Deck class
         self.value = 0   # start with zero value
-        self.aces = 0    # add an attribute to keep track of aces
+        self.aces = 0    # add an attribute to keep track of Aces
     
     def add_card(self,card):
         #card passed in is actually going to be from the Deck.deal()
@@ -58,8 +58,8 @@ class Hand:
             self.aces += 1
     
     def adjust_for_ace(self):
-        #If total value > 21 and I still have an ace
-        #Then change my ace to be 1 instead of 11
+        #If total value > 21 and I still have an Ace
+        #Then change my Ace to be 1 instead of 11
         while self.value > 21 and self.aces:
             self.value -= 10
             self.aces -= 1
